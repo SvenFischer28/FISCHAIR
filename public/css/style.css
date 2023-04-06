@@ -1,0 +1,108 @@
+:root {
+    --blue: #0081C9;
+    --montserrat: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+nav {
+    margin-bottom: 0;
+}
+
+/* navbar */
+
+/* container top */
+.container-top {
+    background-image: url(/imgs/pexels-kelly-2887796.jpg);
+    height: 90vh;
+    width: 100vw;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.container-top h1 {
+
+    color: whitesmoke;
+    font-family: var(--montserrat);
+    font-size: 9rem;
+    backdrop-filter: blur(25px);
+    width: 35vw;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+/* container top */
+
+/* cards */
+.cards-container {
+    margin-top: 15vh;
+}
+
+.card {
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 25vw;
+    height: 25vh;
+    margin-top: 5rem;
+    display: table;
+    transition: 0.3s;
+    background-color: var(--blue);
+    color: whitesmoke;
+
+}
+
+.card:hover {
+    border-style: solid;
+    border-color: white;
+    border-width: 8px;
+    color: whitesmoke;
+    width: 26vw;
+    height: 26vh;
+}
+
+.card-title {
+    height: 20vh;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 4.3rem;
+    font-family: var(--montserrat);
+
+}
+
+
+#row2-card1 {
+    transform: translateX(100px);
+}
+
+#row2-card2 {
+    transform: translateX(-100px);
+}
+
+@media screen and (max-width:700px) {
+    .card {
+        width: 80vw;
+    }
+
+    #row2-card1 {
+        transform: translateX(0);
+    }
+
+    #row2-card2 {
+        transform: translateX(0);
+    }
+
+    .cards-container {
+        margin-top: 8vh;
+    }
+
+
+}
+
+
+/* cards */
