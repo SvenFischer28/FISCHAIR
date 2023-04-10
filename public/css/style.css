@@ -1,11 +1,15 @@
 :root {
     --blue: #0081C9;
     --montserrat: 'Montserrat', sans-serif;
+    --lightgray: #E0E7E9
 }
+
+
 
 body {
     margin: 0;
     padding: 0;
+    font-family: var(--montserrat);
 }
 
 /* navbar */
@@ -16,7 +20,7 @@ nav {
 /* navbar */
 
 /* container top */
-.container-top {
+#container-top {
     background-image: url(/imgs/pexels-kelly-2887796.jpg);
     height: 90vh;
     width: 100vw;
@@ -24,31 +28,21 @@ nav {
     vertical-align: middle;
 }
 
-.container-top h1 {
+#container-top h1 {
 
     color: whitesmoke;
     font-family: var(--montserrat);
-    font-size: 9rem;
-    backdrop-filter: blur(25px);
-    width: 35vw;
+    backdrop-filter: blur(40px);
+    width: min-content;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 5vw;
+    padding-right: 5vh;
+
 
 }
 
-@media screen and (max-width: 700px) {
 
-    .container-top {
-        text-align: center;
-        height: 100vh;
-    }
-
-    .container-top h1 {
-        font-size: 6rem;
-        width: 80vw;
-
-    }
-}
 
 /* container top */
 
@@ -98,7 +92,7 @@ nav {
     transform: translateX(-100px);
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:1000px) {
     .card {
         width: 80vw;
     }
@@ -120,3 +114,99 @@ nav {
 
 
 /* cards */
+
+
+/* Section2 */
+.section2 {
+    background-color: var(--blue);
+    text-align: center;
+}
+
+.section2 .card {
+    text-align: center;
+
+}
+
+.section2 .card-title {
+    margin: auto;
+
+}
+
+.section2 h1 {
+    color: var(--lightgray);
+}
+
+.section2 h2 {
+    color: var(--lightgray);
+}
+
+.section2 h3 {
+    color: var(--lightgray);
+}
+
+/* Section2 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width:1001px) {
+
+
+    #container-top h1 {
+
+
+        font-size: 9rem;
+    }
+
+    #container-top {
+        height: 100vh;
+    }
+}
+
+
+
+@media (min-width:501px) and (max-width: 1000px) {
+
+    #container-top {
+        text-align: center;
+        height: 100vh;
+    }
+
+    #container-top h1 {
+        font-size: 4rem;
+        width: min-content;
+
+    }
+
+}
+
+@media (min-width:0) and (max-width: 500px) {
+    #container-top h1 {
+        font-size: 3rem;
+        width: min-content;
+
+
+    }
+
+    #container-top {
+        height: 100vh;
+    }
+}
