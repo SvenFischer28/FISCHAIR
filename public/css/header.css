@@ -1,0 +1,54 @@
+:root {
+    --blue: #0081C9;
+    --montserrat: 'Montserrat', sans-serif;
+    --lightgray: #DEE1EC;
+    --red: #C82121;
+    --bluehover: #015481;
+
+}
+
+
+
+.navbar {
+    background-color: var(--lightgray) !important;
+
+}
+
+nav button {
+    color: var(--blue);
+}
+
+i {
+    margin: 5px;
+    transform: translateY(5px);
+}
+
+a {
+    font-family: var(--montserrat);
+    font-weight: 500;
+    color: var(--blue) !important;
+
+}
+
+.nav-link {
+    margin: 5px;
+    color: var(--blue) !important;
+    border-right: solid 1px var(--blue);
+}
+
+#kontakt {
+    color: var(--red) !important;
+    border-right: none !important;
+}
+
+
+.nav-link:hover {
+    color: var(--bluehover) !important;
+}
+
+
+@media(max-width:1000px) {
+    .nav-link {
+        border: none;
+    }
+}
