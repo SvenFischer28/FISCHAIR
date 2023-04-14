@@ -5,7 +5,6 @@
 }
 
 
-
 body {
     margin: 0;
     padding: 0;
@@ -46,74 +45,7 @@ nav {
 
 /* container top */
 
-/* cards */
-.cards-container {
-    margin-top: 15vh;
-}
 
-.card {
-
-    margin-left: auto;
-    margin-right: auto;
-    width: 25vw;
-    height: 25vh;
-    margin-top: 5rem;
-    display: table;
-    transition: 0.3s;
-    background-color: var(--blue);
-    color: whitesmoke;
-
-}
-
-.card:hover {
-    border-style: solid;
-    border-color: white;
-    border-width: 8px;
-    color: whitesmoke;
-    width: 26vw;
-    height: 26vh;
-}
-
-.card-title {
-    height: 20vh;
-    display: table-cell;
-    vertical-align: middle;
-    font-size: 4.3rem;
-    font-family: var(--montserrat);
-
-}
-
-
-#row2-card1 {
-    transform: translateX(100px);
-}
-
-#row2-card2 {
-    transform: translateX(-100px);
-}
-
-@media screen and (max-width:1000px) {
-    .card {
-        width: 80vw;
-    }
-
-    #row2-card1 {
-        transform: translateX(0);
-    }
-
-    #row2-card2 {
-        transform: translateX(0);
-    }
-
-    .cards-container {
-        margin-top: 8vh;
-    }
-
-
-}
-
-
-/* cards */
 
 
 /* Section2 */
@@ -146,6 +78,58 @@ nav {
 
 /* Section2 */
 
+
+/* Carousel */
+
+.carousel {
+    margin-top: 10vh;
+}
+
+.carousel .col-lg-6 {
+    display: grid;
+    justify-content: center;
+}
+
+.carousel .card {
+    border: none;
+    width: 50vw;
+    transform: translateX(-10vw);
+
+}
+
+.carousel img {
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-5vh);
+}
+
+.card img {
+    display: none;
+}
+
+.carousel h5 {
+    color: var(--blue);
+    font-weight: 700;
+}
+
+.carousel h6 {
+    color: rgb(74, 74, 74);
+}
+
+.carousel p {
+    margin-top: 4vh;
+}
+
+.carousel a {
+    color: var(--lightgray) !important;
+    background-color: var(--blue);
+
+}
+
+
+
+/* -------------- */
 
 
 
@@ -209,4 +193,19 @@ nav {
     #container-top {
         height: 100vh;
     }
+
+    .carousel-item img {
+        display: none;
+        width: 50vw;
+        transform: translateY(0);
+    }
+
+    .carousel .card {
+        width: 95vw;
+        transform: translateX(0vw)
+    }
+
+
+
+
 }
