@@ -10,7 +10,7 @@
 
 
 .navbar {
-    background-color: var(--lightgray) !important;
+    background-color: whitesmoke !important;
 
 }
 
@@ -46,6 +46,17 @@ a {
     color: var(--bluehover) !important;
 }
 
+.dropdown-menu {
+    border: none;
+}
+
+.dropdown-menu .dropdown-item {
+    border-bottom: #0081C9 solid 1px;
+}
+
+.dropdown-menu .last-dropdown-item {
+    border: none !important;
+}
 
 @media(max-width:1000px) {
     .nav-link {
