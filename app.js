@@ -3,7 +3,6 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
 const app = express();
-
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,6 +14,37 @@ const starting_content = "Lorem ipsum dolor sit amet, consectetur adipiscing eli
 app.get("/", function (req, res) {
     // res.sendFile(__dirname + "/public/html/home.html")
     res.render("home")
+})
+
+
+
+const rekuperacie = [
+    {
+        name: "rekuperacia1",
+        link: "https://www.comair.sk/index.php/produkty",
+        text: "This is the first rekuperacia object"
+    },
+    {
+        name: "rekuperacia2",
+        price: 200,
+        text: "This is the second rekuperacia object"
+    },
+    {
+        name: "rekuperacia3",
+        price: 300,
+        text: "This is the third rekuperacia object"
+    },
+    {
+        name: "rekuperacia4",
+        price: 300,
+        text: "This is the third rekuperacia object"
+    }
+];
+
+
+app.get("/rekuperacie", function (req, res) {
+
+    res.render("rekuperacie/rekuperacie", { rekuperacie: rekuperacie })
 })
 
 
