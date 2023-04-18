@@ -22,7 +22,9 @@ const rekuperacie = [
     {
         name: "rekuperacia1",
         link: "https://www.comair.sk/index.php/produkty",
-        text: "This is the first rekuperacia object"
+        text: "This is the first rekuperacia object",
+        image: "/imgs/rekuperacia_o3ozon_1.jpeg"
+
     },
     {
         name: "rekuperacia2",
@@ -36,8 +38,8 @@ const rekuperacie = [
     },
     {
         name: "rekuperacia4",
-        price: 300,
-        text: "This is the third rekuperacia object"
+        price: 400,
+        text: "This is the fourth rekuperacia object"
     }
 ];
 
@@ -45,6 +47,10 @@ const rekuperacie = [
 app.get("/rekuperacie", function (req, res) {
 
     res.render("rekuperacie/rekuperacie", { rekuperacie: rekuperacie })
+})
+
+app.get("/rekuperacie/COMAIR/rekuperacia1", function (req, res) {
+    res.render("rekuperacie/rekuperacia.ejs")
 })
 
 
