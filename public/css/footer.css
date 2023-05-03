@@ -1,0 +1,41 @@
+:root {
+    --blue: #0081C9;
+    --montserrat: 'Montserrat', sans-serif;
+    --lightgray: #DEE1EC;
+    --red: #C82121;
+    --bluehover: #015481;
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--montserrat);
+}
+
+footer {
+    background-color: var(--blue);
+}
+
+button {
+    border: none;
+    background-color: var(--blue);
+    padding: 15px 23px;
+    border-radius: 8%;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1rem;
+    transition-duration: 300ms;
+}
+
+button:hover {
+    background-color: var(--bluehover);
+    padding: 16px 24px;
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}

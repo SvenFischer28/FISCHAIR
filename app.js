@@ -20,16 +20,30 @@ app.get("/", function (req, res) {
 
 
 
-let rekuperacie = require(__dirname + "/public/produkty/rekuperacie_comair.js");
+let produkty = require(__dirname + "/public/produkty/produkty.js");
+let rekuperacie = produkty.rekuperacie;
 
 app.get("/rekuperacie", function (req, res) {
 
-    res.render("rekuperacie/rekuperacie", { rekuperacie: rekuperacie })
+    res.render("pordukty/produkty", { rekuperacie: rekuperacie })
+})
+
+
+app.get("/:produkty/:vyrobca", function (req, res) {
+    const produktyParam = req.params.produkty;
+    const vyrobca = req.params.vyrobca;
+    const renderProducts = produkty.produktyParam;
+    const renderProductsVyrobca = renderProducts.find(item => item.brand == vyrobca);
+
+
+    res.render("produkty/produkty", { produkty: renderProductsVyrobca })
+
+
 })
 
 app.get("/rekuperacie/comair/:name", function (req, res) {
     let nazovRekuperacie = _.upperFirst([req.params.name]);
-    let rekuperacia = rekuperacie.find(item => item.url === nazovRekuperacie);
+    let rekuperacia = rekuperacie.find(item => item.name === nazovRekuperacie);
 
     res.render("rekuperacie/rekuperacia", { rekuperacia: rekuperacia })
 })

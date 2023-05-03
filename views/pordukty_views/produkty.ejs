@@ -21,15 +21,15 @@
         <div class="row">
 
 
-        <% for(let i = 0; i< rekuperacie.length; i++){ %>
+        <% for(let i = 0; i< produkty.length; i++){ %>
             <div class="col-lg-4 col-md-6 col-sm-12" >
 
                 <div class="card" >
-                    <img src="<%= rekuperacie[i].image %>" class="card-img-top" alt="...">
+                    <img src="<%= produkty[i].image %>" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h5 class="card-title"> <%= rekuperacie[i].name %> </h5>
+                      <h5 class="card-title"> <%= produkty[i].brand + " " + produkty[i].name %> </h5>
                       <p class="card-text"> <%= rekuperacie[i].cardText %> </p>
-                      <a href="<%=rekuperacie[i].link%>" class="btn ">Viac</a>
+                      <a href="<%= produkty[i].link %>" class="btn ">Viac</a>
                     </div>
                   </div>
             </div>

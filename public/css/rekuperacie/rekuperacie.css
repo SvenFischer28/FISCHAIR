@@ -1,7 +1,10 @@
 :root {
     --blue: #0081C9;
     --montserrat: 'Montserrat', sans-serif;
-    --lightgray: #E0E7E9
+    --lightgray: #E0E7E9;
+    --red: #C82121;
+    --darkgray: #6B728E;
+    --orange: #ff7e36;
 }
 
 
@@ -41,7 +44,9 @@ body {
 }
 
 .container .row .card-title {
-    color: #FA9856;
+    color: var(--orange);
+    font-weight: 700;
+    font-size: 1.5rem;
 }
 
 .container .row .card-text {

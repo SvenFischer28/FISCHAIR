@@ -10,26 +10,28 @@
     <title>Document</title>
 </head>
 <body>
-      <%- include('../partials/header.ejs') %>
+    <%- include('../partials/header.ejs') %>
+
 
     <div class="container-fluid">
         </div>
         <div class="row ">
             <div class="col-lg-6 col-md-12 image">
-                <h2 class="name-mobile"><%= rekuperacia.name %></h2>
+                <h2 class="name-mobile"><%= rekuperacia.brand + " " +  rekuperacia.name %></h2>
                <img class="main-image" src="<%= rekuperacia.image %>" alt="">
             </div>
             <div class="top-description-container col-lg-6 col-md-12">
-            <h2 class="name-desktop"><%= rekuperacia.name %></h2>
-            <h3><%= rekuperacia.text %></h3>
-            <h4><%= rekuperacia.price %></h4>
+            <h2 class="name-desktop"><%= rekuperacia.brand + " " +  rekuperacia.name %></h2>
+            <!-- <h3><%= rekuperacia.text %></h3>
+            <h4><%= rekuperacia.price %></h4> -->
             <h5><%= rekuperacia.topDescription %></h5>
             </div>
         </div>
+        <hr>
         <div class="row">
             <div class="col-list  col-12">
                 <% for( let i = 0; i < rekuperacia.listDescription.length; i++ ) { %>
-                    <h6><%= rekuperacia.listDescription[i][0] %></h6>
+                    <h6 class="list-title"><%= rekuperacia.listDescription[i][0] %></h6>
                 <% for( let x = 1; x < rekuperacia.listDescription[i].length; x++ ) { %>
                     <li> <%=rekuperacia.listDescription[i][x].substring(1) %> </li>
                 <% } %>
