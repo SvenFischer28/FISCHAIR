@@ -18,7 +18,26 @@ footer {
     background-color: var(--blue);
 }
 
-button {
+footer label {
+    margin-top: 1vh;
+}
+
+footer input {
+    border: none;
+
+    background-color: transparent;
+    border-bottom: #0081C9 3px solid;
+}
+
+::placeholder {
+    color: whitesmoke;
+}
+
+.contact-form {
+    background-color: whitesmoke;
+}
+
+footer button {
     border: none;
     background-color: var(--blue);
     padding: 15px 23px;
@@ -29,13 +48,7 @@ button {
     transition-duration: 300ms;
 }
 
-button:hover {
+footer button:hover {
     background-color: var(--bluehover);
     padding: 16px 24px;
-}
-
-form {
-    margin-left: auto;
-    margin-right: auto;
-    width: fit-content;
 }
