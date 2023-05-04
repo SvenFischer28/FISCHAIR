@@ -3,7 +3,8 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require('lodash');
 const app = express();
-const nodemailer = require("node-mailer")
+const nodemailer = require("nodemailer")
+const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -21,12 +22,49 @@ app.get("/", function (req, res) {
 
 
 
+
+
+
+
+app.post("/", (req, res) => {
+    var meno = req.body.meno;
+    var email = req.body.email;
+    var tel = req.body.tel;
+    var miesto = req.body.miesto;
+    var sprava = req.body.sprava;
+    const html = "<h2>meno: " + meno + " </h2><h2>email: " + email + "</h2><h2>telefónne číslo: " + tel + "</h2><h2>miesto: " + miesto + "</h2><h2>správa: " + sprava + "</h2>"
+
+    var transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: "svenfischer282@gmail.com",
+            pass: "avnoldynhhwwgxfv"
+        }
+    })
+    var mailOptions = {
+        from: "svenfischer282@gmail.com",
+        to: "sven2fischer8@gmail.com",
+        subject: "Nová ponuka",
+        html: html
+    };
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log("email sent" + info.response);
+        }
+    });
+    res.render("emailPoslany");
+
+})
+
+
 let produkty = require(__dirname + "/public/produkty/produkty.js");
 let rekuperacie = produkty.rekuperacie;
 
 app.get("/rekuperacie", function (req, res) {
 
-    res.render("pordukty/produkty", { rekuperacie: rekuperacie })
+    res.render("produkty_views/produkty", { rekuperacie: rekuperacie })
 })
 
 
@@ -54,6 +92,6 @@ app.get("/rekuperacie/comair/:name", function (req, res) {
 
 
 
-app.listen(3000, function (req, res) {
+app.listen(PORT, function (req, res) {
     console.log("app is running on port 3000")
 })
