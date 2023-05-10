@@ -7,10 +7,6 @@
     --orange: #ff7e36;
 }
 
-html {
-    width: 100vw;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -75,7 +71,7 @@ ul {
     margin-top: 5vh;
 }
 
-li {
+.vyhody li {
     padding: 0%;
     line-height: 21px;
     margin-left: 5vw;

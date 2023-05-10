@@ -15,20 +15,22 @@ body {
 }
 
 .container .row .card {
-    border: #0081C9 2px solid;
-    border-radius: 3%;
+    border: var(--lightgray) 1px solid;
+    /* border-radius: 3%; */
     margin: 2%;
 }
 
 .container .row .card .btn {
     background-color: var(--blue) !important;
     color: white !important;
-    border: whitesmoke 2px solid;
+    position: absolute !important;
+    bottom: 9px;
 
 }
 
 .container .row .card img {
     width: fit-content;
+    height: fit-content;
     margin-left: 3px;
     margin-top: 3px;
     height: 28vh;
@@ -37,9 +39,9 @@ body {
 }
 
 .container .row .card .card-body {
-    background-color: var(--blue);
-    border-bottom-left-radius: 3%;
-    border-bottom-right-radius: 3%;
+    background-color: var(--lightgray);
+    /* border-bottom-left-radius: 3%;
+    border-bottom-right-radius: 3%; */
     height: 27vh;
 }
 
@@ -50,5 +52,5 @@ body {
 }
 
 .container .row .card-text {
-    color: whitesmoke;
+    color: var(--darkgray);
 }
