@@ -1,0 +1,155 @@
+:root {
+    --blue: #0081C9;
+    --montserrat: 'Montserrat', sans-serif;
+    --lightgray: #DEE1EC;
+    --red: #C82121;
+    --bluehover: #015481;
+    --darkgray: #6B728E;
+
+
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--montserrat);
+}
+
+
+::placeholder {
+    color: whitesmoke;
+}
+
+.contact-form {
+    background-color: whitesmoke;
+    border: solid rgb(58, 58, 58) 1px;
+    width: 30vw;
+    padding-left: 2vw;
+    margin-left: 5vw;
+    margin-bottom: 4vh;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.436);
+    transition-duration: 300ms;
+}
+
+.contact-form:hover {
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.644);
+    transform: translate(-2px, -2px);
+
+}
+
+.contact-form textarea {
+    background-color: transparent;
+}
+
+footer button {
+    border: none;
+    background-color: var(--blue);
+    padding: 15px 23px;
+    border-radius: 8%;
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 1rem;
+    transition-duration: 300ms;
+    margin-bottom: 1vh;
+}
+
+footer button:hover {
+    background-color: var(--bluehover);
+    padding: 16px 24px;
+}
+
+iframe {
+    width: 40vw;
+    height: 50vh;
+}
+
+.map-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+i {
+    font-size: 40px;
+    margin-bottom: 3vh;
+}
+
+.info {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10vh;
+}
+
+.info .i {
+    width: 20vw;
+    margin: auto;
+    color: var(--bluehover);
+
+}
+
+.info a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 500;
+}
+
+.info p {
+    color: var(--blue);
+    font-weight: 500;
+
+}
+
+
+
+@media (max-width:700px) {
+    iframe {
+        width: 80vw;
+        height: 50vh;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .contact-form {
+        width: 80vw;
+        height: fit-content;
+        padding-left: 2vw;
+        margin-left: 5vw;
+        margin-bottom: 4vh;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .info {
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .info .i {
+        margin: auto;
+        width: 80vw;
+        margin-bottom: 10vh;
+
+    }
+
+    .info i {
+        font-size: 4rem;
+    }
+
+    .info a {
+        font-size: 1.6rem;
+    }
+
+    .info p {
+        font-size: 1.6rem;
+    }
+
+    .info {
+        margin-bottom: 2vh !important;
+        margin-top: 10vh !important;
+    }
+}

@@ -14,10 +14,22 @@ body {
     font-family: var(--montserrat);
 }
 
+.produkt {
+    margin-top: 5vh !important;
+
+}
+
 .container .row .card {
     border: var(--lightgray) 1px solid;
     /* border-radius: 3%; */
     margin: 2%;
+    box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.436);
+    transition-duration: 300ms;
+}
+
+.container .row .card:hover {
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.644);
+    transform: translate(-2px, -2px);
 }
 
 .container .row .card .btn {
@@ -25,12 +37,13 @@ body {
     color: white !important;
     position: absolute !important;
     bottom: 9px;
+    margin-bottom: 5px !important;
 
 }
 
 .container .row .card img {
-    width: fit-content;
-    height: fit-content;
+    width: calc(fit-content - 20px);
+    height: calc(fit-content - 20px);
     margin-left: 3px;
     margin-top: 3px;
     height: 28vh;
@@ -42,6 +55,7 @@ body {
     background-color: var(--lightgray);
     /* border-bottom-left-radius: 3%;
     border-bottom-right-radius: 3%; */
+
     height: 27vh;
 }
 

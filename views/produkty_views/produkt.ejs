@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/rekuperacie/rekuperacia.css">
+    <link rel="stylesheet" href="/css/produkty/produkt.css">
 
     <%- include('../partials/links.ejs') %>
     <title>Document</title>
@@ -12,19 +12,20 @@
 <body>
     <%- include('../partials/header.ejs') %>
 
-
+<main>
     <div class="container-fluid">
         </div>
         <div class="row ">
             <div class="col-lg-6 col-md-12 image">
                 <h2 class="name-mobile"><%= produkt.brand + " " +  produkt.name %></h2>
+                <h4 class="price-mobile"><%= produkt.price %></h4> 
                <img class="main-image" src="<%= produkt.image %>" alt="">
             </div>
             <div class="top-description-container col-lg-6 col-md-12">
             <h2 class="name-desktop"><%= produkt.brand + " " +  produkt.name %></h2>
             <!-- <h3><%= produkt.text %></h3>
-            <h4><%= produkt.price %></h4> -->
-            <h5><%= produkt.topDescription %></h5>
+            <h4 class="price"><%= produkt.price %></h4>--> 
+            <h5 class="top-description"><%= produkt.topDescription %></h5>
             </div>
         </div>
         <hr>
@@ -41,7 +42,7 @@
         </div>
 
     </div>
-
+<%- include('../partials/footer.ejs') %>
 </body>
 </html>
 

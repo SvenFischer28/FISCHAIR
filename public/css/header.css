@@ -48,6 +48,7 @@ a {
 
 .dropdown-menu {
     border: none;
+    background-color: whitesmoke;
 }
 
 .dropdown-menu .dropdown-item {
@@ -61,5 +62,9 @@ a {
 @media(max-width:1000px) {
     .nav-link {
         border: none;
+    }
+
+    .dropdown-menu {
+        background-color: transparent;
     }
 }

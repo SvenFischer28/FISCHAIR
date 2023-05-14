@@ -4,7 +4,9 @@
     --lightgray: #E0E7E9;
     --red: #C82121;
     --darkgray: #6B728E;
+    --darkergray: #4c5064;
     --orange: #ff7e36;
+    --darkorange: #ff7e36
 }
 
 body {
@@ -19,6 +21,10 @@ body {
 
 .name-desktop {
     display: block;
+    font-size: 2.5rem;
+    margin-top: 10vh !important;
+    margin-top: 8vh;
+
 }
 
 hr {
@@ -42,20 +48,28 @@ h3 {
     transform: translateX(10vw);
 }
 
-.top-description-container h2 {
-    margin-top: 8vh;
-    margin-bottom: 8vh;
+.top-description-container h5 {
+    color: var(--darkergray);
+    margin-right: 3vw;
+    margin-top: 5vh;
 }
 
-.top-description-container h5 {
+.price {
+    color: var(--orange);
+    margin-top: 1vh;
+}
 
-    margin-right: 3vw;
+.price-mobile {
+    color: var(--orange);
+    margin-top: 1vh;
+    display: none;
 }
 
 .main-image {
-    width: 100%;
-    margin-top: 9vh;
-    margin-left: 2vw;
+    width: 50vw !important;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    margin-bottom: 5vh;
 }
 
 
@@ -84,7 +98,11 @@ ul {
 }
 
 
-
+.sticky-footer {
+    position: sticky;
+    top: 100%;
+    margin-top: 20vh;
+}
 
 
 @media all and (min-width: 990px) {
@@ -102,16 +120,35 @@ ul {
     }
 
     .main-image {
-        width: 80vw;
-        margin-left: auto;
-        margin-right: auto;
+        width: 90vw !important;
+
     }
 
     .name-mobile {
         display: block;
+        font-size: 2rem;
+        margin-top: 3vh;
+        margin-left: 3vw;
     }
 
     .name-desktop {
         display: none;
     }
+
+    .price {
+        display: none;
+    }
+
+    .price-mobile {
+        display: block;
+        margin-left: 3vw;
+        font-size: 1.5rem;
+    }
+
+    .sticky-footer {
+        position: sticky;
+        top: 100%;
+        margin-top: 20vh;
+    }
+
 }
