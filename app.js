@@ -89,6 +89,9 @@ app.get("/produkty/:kategoriaP/:vyrobca/:produkt", (req, res) => {
         let produkt = rekuperacie.find(item => item.name === produktP);
         res.render("produkty_views/produkt", { produkt: produkt })
 
+    } else {
+        let produkt = rekuperacie.find(item => item.name === produktP);
+        res.render("produkty_views/produkt", { produkt: produkt })
     }
 })
 
