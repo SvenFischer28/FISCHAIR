@@ -3,7 +3,7 @@ import Product from '../models/products.js';
 const router = express.Router();
 
 
-router.get("/:produkty/:vyrobca", async (req, res)=> {
+router.get("/produkty/:produkty/:vyrobca", async (req, res)=> {
     const produktyParam = req.params.produkty;
     const vyrobca = req.params.vyrobca;
     
