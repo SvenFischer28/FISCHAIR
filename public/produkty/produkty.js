@@ -16,7 +16,7 @@
 const produkty = [
     rekuperacie = [
         {
-            productCategory: "rekuperacia",
+            productCategory: "rekuperacie",
             brand: "COMAIR",
             name: "HRUC-PLUS",
             link: "/rekuperacie/COMAIR/HRUC-PLUS",
@@ -50,7 +50,7 @@ const produkty = [
 
         },
         {
-            productCategory: "rekuperacia",
+            productCategory: "rekuperacie",
             brand: "COMAIR",
             name: "HRUC-E",
             link: "/rekuperacie/COMAIR/HRUC-E",
@@ -91,7 +91,7 @@ const produkty = [
         },
 
         {
-            productCategory: "rekuperacia",
+            productCategory: "rekuperacie",
             brand: "COMAIR",
             name: "FLAT",
             link: "/rekuperacie/COMAIR/FLAT",
@@ -125,7 +125,7 @@ const produkty = [
 
         },
         {
-            productCategory: "rekuperacia",
+            productCategory: "rekuperacie",
             brand: "BRINK",
             name: "SVEN",
             link: "/rekuperacie/COMAIR/FLAT",
@@ -159,7 +159,7 @@ const produkty = [
 
         },
         {
-            productCategory: "rekuperacia",
+            productCategory: "rekuperacie",
             brand: "BRINK",
             name: "234238798",
             link: "/rekuperacie/COMAIR/FLAT",

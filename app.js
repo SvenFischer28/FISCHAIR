@@ -1,102 +1,76 @@
-const express = require("express");
-const fs = require('fs');
-const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const _ = require('lodash');
+import express from 'express';
+import fs from 'fs';
+import bodyParser from 'body-parser';
+import ejs from 'ejs';
+import _ from 'lodash';
+import nodemailer from 'nodemailer';
+import lodash from 'lodash';
+import mongoose from 'mongoose';
+import Product from './src/models/products.js';
+import {router as homeRoute} from "./src/routes/homeRoute.js";
+import {router as produktyRoute} from "./src/routes/produktyRoute.js";
+import {router as produktRoute} from "./src/routes/produktRoute.js";
+
+
 const app = express();
-const nodemailer = require("nodemailer");
-const { find } = require("lodash");
+
 const PORT = process.env.PORT || 3000
 app.set('view engine', 'ejs');
+import 'dotenv/config'
+
+
+
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
-app.use("produkty", express.static(__dirname + ("public/produkty")))
 
 
 
-app.get("/", function (req, res) {
-    // res.sendFile(__dirname + "/public/html/home.html")
-    res.render("home")
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect(process.env.DATABASE_CONNECTION);
+
+}
+
+const produkt = new Product({
+    productCategory: "rekuperacia",
+    brand: "COMAIR",
+    name: "HRUC-PLUS",
+    link: "/rekuperacie/COMAIR/HRUC-PLUS",
+    cardText: "Kompaktné rozmery, ovládanie cez smartfón, kvalitná konštrukcia ideálna pre byty a menšie rodinné domy.",
+    image: "/imgs/Rekuperacie/COMAIR/hruc-plus.jpeg",
+    price: 200,
+    topDescription: "Najnovšia generácia rekuperačných jednotiek COMAIR zaručuje optimálnu rovnováhu medzi komfortom a energetickou účinnosťou. Zariadenia sú navrhnuté na nepretržitú, nepočuteľnú a energeticky efektívnu prevádzku. Moderné možnosti ovládania cez dotykový displej, alebo smart zariadenie. K dispozícií sú vo verzii HRUC-Plus 2 s výkonom 225 m3/h a HRUC-Plus 3  s výkonom 325 m3/h.",
+    listDescription: [
+        ["MODERNÉ OVLÁDANIE",
+            "- ovládanie s dotykovou obrazovkou na jednotke",
+            "- ovládanie s dotykovou obrazovkou v interiéri (nástenný dokovací kit)",
+            "- ovládanie prostredníctvom Smart zariadenia cez aplikáciu"],
+        ["SENZORY",
+            "- CO2",
+            "- vlhkosť"],
+        ["KOMPATIBILITA",
+            "- 5 x bezpotenciálový kontakt",
+            "- 1 x prepínač vstupu pre zvýšenie výkonu (napr. Spínač svetla)",
+            "- 1 x výstup poruchy",
+            "- možnosť 2 x vstup 0 – 10 V"],
+        ["MAXIMÁLNE POHODLIE",
+            "- výmena filtrov bez snímania vonkajšieho krytu",
+            "- tichá prevádzka",
+            "- upozornenie na zanesenie filtrov a interval výmeny",
+            "- pohodlná inštalácia pravej/ľavej verzie"],
+        ["EFEKTIVITA",
+            "- energetická účinnosť A+",
+            "- SEC A+",
+            "- účinnosť rekuperácie 94 %"]
+    ]
 })
 
 
-app.post("/", (req, res) => {
-    var meno = req.body.meno;
-    var email = req.body.email;
-    var tel = req.body.tel;
-    var miesto = req.body.miesto;
-    var sprava = req.body.sprava;
-    const html = "<h2>meno: " + meno + " </h2><h2>email: " + email + "</h2><h2>telefónne číslo: " + tel + "</h2><h2>miesto: " + miesto + "</h2><h2>správa: " + sprava + "</h2>"
-
-    var transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: "svenfischer282@gmail.com",
-            pass: "avnoldynhhwwgxfv"
-        }
-    })
-    var mailOptions = {
-        from: "svenfischer282@gmail.com",
-        to: "sven2fischer8@gmail.com",
-        subject: "Nová ponuka",
-        html: html
-    };
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log("email sent" + info.response);
-        }
-    });
-    res.render("emailPoslany");
-
-})
-
-
-
-
-// products require
-const { rekuperacie } = require(__dirname + "/public/produkty/produkty.js");
-//////////////////////////////////
-
-
-
-app.get("/:produkty/:vyrobca", function (req, res) {
-    const produktyParam = req.params.produkty;
-    const vyrobca = req.params.vyrobca;
-
-    if (produktyParam === "rekuperacie") {
-        const renderProductsVyrobca = rekuperacie.filter(obj => obj.brand === vyrobca)
-        res.render("produkty_views/produkty", { produkty: renderProductsVyrobca })
-    }
-
-
-})
-
-// app.get("/rekuperacie/comair/:name", function (req, res) {
-//     let nazovRekuperacie = _.upperFirst([req.params.name]);
-//     let rekuperacia = rekuperacie.find(item => item.name === nazovRekuperacie);
-
-//     res.render("produkty_views/rekuperacia", { produkt: rekuperacia })
-// })
-
-app.get("/produkty/:kategoriaP/:vyrobca/:produkt", (req, res) => {
-    const kategoriaP = req.params.produkt;
-    const produktP = req.params.produkt;
-
-    if (kategoriaP == "rekuperacie") {
-        let produkt = rekuperacie.find(item => item.name === produktP);
-        res.render("produkty_views/produkt", { produkt: produkt })
-
-    } else {
-        let produkt = rekuperacie.find(item => item.name === produktP);
-        res.render("produkty_views/produkt", { produkt: produkt })
-    }
-})
-
-
-
+app.use("/", homeRoute);
+app.use("/", produktyRoute);
+app.use("/", produktRoute);
 
 app.listen(PORT, function (req, res) {
     console.log("app is running on port 3000")
