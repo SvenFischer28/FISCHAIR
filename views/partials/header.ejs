@@ -1,71 +1,124 @@
-<link rel="stylesheet" href="/css/header.css">
-<nav class="navbar navbar-expand-lg ">
+<link rel="stylesheet" href="/css/header.css" />
+<nav class="navbar navbar-expand-lg">
   <div class="container">
-      <a href="/" class="navbar-brand">FISCHAIR</a>
-  
-      <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navmenu"
+    <a href="/" class="navbar-brand">FISCHAIR</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navmenu"
+    >
+      <span class="navbar-toggler-icon"
+        ><i class="fa-solid fa-bars fa-xl"></i
+      ></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navmenu">
+      <ul class="navbar-nav ms-auto">
+        <!-- Rekuperacie nav -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl  "></i></span>
-      </button>
+            Rekuperácie
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/produkty/rekuperacie/COMAIR"
+                >COMAIR</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/produkty/rekuperacie/BRINK"
+                >BRINK</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="/produkty/rekuperacie/o3ozon"
+                >O3ozon</a
+              >
+            </li>
+            <li>
+              <a href="" class="dropdown-item last-dropdown-item"
+                >STIEBEL ELTRON</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!-- klimatizacie nav -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Klimatizácie
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/produkty/klimatizacie/GREE"
+                >GREE</a
+              >
+            </li>
+            <li>
+              <a
+                class="dropdown-item last-dropdown-item"
+                href="/produkty/klimatizacie/SINCLAIR"
+                >SINCLAIR</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!-- Tepelné čerpadlá -->
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Tepelné čerpadlá
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="/produkty/tepelneCerpadla/GREE"
+                >GREE</a
+              >
+            </li>
+            <li><a class="dropdown-item" href="#">SINCLAIR</a></li>
+            <li><a class="dropdown-item" href="#">O3ozon</a></li>
+            <li>
+              <a href="" class="dropdown-item last-dropdown-item"
+                >STIEBEL ELTRON</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!-- Vonakjšie rolety -->
 
-      <div class="collapse navbar-collapse" id="navmenu">
-          <ul class="navbar-nav ms-auto">
-            <!-- Rekuperacie nav -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Rekuperácie
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/produkty/rekuperacie/COMAIR">COMAIR</a></li>
-                <li><a class="dropdown-item" href="/produkty/rekuperacie/BRINK">BRINK</a></li>
-                <li><a class="dropdown-item" href="/produkty/rekuperacie/o3ozon">O3ozon</a></li>
-                <li><a href=""  class="dropdown-item last-dropdown-item">STIEBEL ELTRON</a></li>
-              </ul>
-            </li>
-            <!-- klimatizacie nav -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Klimatizácie
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/produkty/klimatizacie/GREE">GREE</a></li>
-                <li><a class="dropdown-item last-dropdown-item" href="/produkty/klimatizacie/SINCLAIR">SINCLAIR</a></li>
-                
-              </ul>
-            </li>
-            <!-- Tepelné čerpadlá -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Tepelné čerpadlá
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/produkty/tepelneCerpadla/GREE">GREE</a></li>
-                <li><a class="dropdown-item" href="#">SINCLAIR</a></li>
-                <li><a class="dropdown-item" href="#">O3ozon</a></li>
-                <li><a href="" class="dropdown-item last-dropdown-item">STIEBEL ELTRON</a></li>
-              </ul>
-            </li>
-            <!-- Vonakjšie rolety -->
-
-              <li class="nav-item">
-                  <a href="#contact" class="nav-link">Vonakjšie rolety</a>
-              </li>
-            <!--Regaly do dodavok  -->
-            <li class="nav-item">
-              <a href="#contact" class="nav-link">Regály do dodávok</a>
-          </li>
-          <!-- Stavebné práce -->
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">Stavebné práce</a>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Vonakjšie rolety</a>
+        </li>
+        <!--Regaly do dodavok  -->
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Regály do dodávok</a>
+        </li>
+        <!-- Stavebné práce -->
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Stavebné práce</a>
         </li>
         <li class="nav-item">
           <a id="kontakt" href="" class="nav-link">Kontakt</a>
         </li>
-          </ul>
-      </div>
+      </ul>
+    </div>
   </div>
-</nav>    
+</nav>
