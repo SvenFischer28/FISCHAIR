@@ -1,0 +1,66 @@
+:root {
+  --blue: #0081c9;
+  --montserrat: "Montserrat", sans-serif;
+  --lightgray: #e0e7e9;
+  --red: #c82121;
+  --darkgray: #6b728e;
+  --darkergray: #52576d;
+  --orange: #ff7e36;
+  --dark: #1e1e1e;
+}
+
+.top-img {
+  width: 50vw;
+  margin-top: 10vh;
+  border-right: 1px solid #ebebeb;
+}
+.main-title {
+  margin-bottom: 4vh;
+}
+.table-container {
+  margin-top: 10vh;
+}
+.table-container h1 {
+  color: #1450a3;
+  font-weight: 400;
+}
+
+.tableL {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.tableR {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.table-container hr {
+  width: 45vw;
+}
+.price {
+  color: var(--orange);
+}
+.list-title {
+  color: var(--blue);
+  font-size: 2rem;
+  margin-top: 5vh;
+}
+.list-item {
+  color: var(--dark);
+  font-weight: 400;
+}
+.text {
+  margin-left: 5vw;
+}
+
+@media all and (max-width: 767px) {
+  .top-img {
+    width: 95vw;
+    border-right: none;
+    text-align: center;
+    margin-top: 4vh;
+  }
+  .text {
+    margin-right: 2vw;
+  }
+}
