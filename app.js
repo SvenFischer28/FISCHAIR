@@ -13,6 +13,7 @@ import { router as produktyRoute } from "./src/routes/produktyRoute.js";
 import { router as produktRoute } from "./src/routes/produktRoute.js";
 import { router as rekuperaciaRoute } from "./src/routes/rekuperaciaRoute.js";
 import Rekuperacia from "./src/models/recuperationModel.js";
+import Klima from "./src/models/klimaModel.js";
 
 const app = express();
 
@@ -42,6 +43,23 @@ app.use("/", homeRoute);
 app.use("/", produktyRoute);
 app.use("/", produktRoute);
 app.use("/", rekuperaciaRoute);
+
+const klima = new Klima({
+  brand: "test",
+  name: "test",
+  link: "test",
+  cardText: "test",
+  image: "test",
+  price: 1234,
+  chladiaciVykon: "test",
+  energetickaTriedaChladenia: "test",
+  SEER: "test",
+  vykurovaciVykon: "test",
+  energetickaTriedaKurenia: "test",
+  rozmeryVnutornejJednotky: "test",
+  rozmeryVonkajsejJednotky: "test",
+});
+// klima.save();
 
 connectDB().then(() => {
   app.listen(PORT, () => {
